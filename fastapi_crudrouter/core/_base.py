@@ -30,6 +30,8 @@ class CRUDGenerator(Generic[T], APIRouter, ABC):
         update_route: Union[bool, DEPENDENCIES] = True,
         delete_one_route: Union[bool, DEPENDENCIES] = True,
         delete_all_route: Union[bool, DEPENDENCIES] = True,
+        pk_name: Optional[str] ='id',
+        pk_type: Optional[type] =int,
         **kwargs: Any,
     ) -> None:
 
